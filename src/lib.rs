@@ -4,7 +4,7 @@ pub fn info() -> String {
 }
 
 // Expose grid module
-mod grid;
+pub mod grid;
 
 #[cfg(test)]
 mod tests {
