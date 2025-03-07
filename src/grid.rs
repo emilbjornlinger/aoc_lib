@@ -8,15 +8,15 @@ pub enum Direction {
 
 #[derive(Clone)]
 pub struct Position {
-    x: usize,
-    y: usize,
+    pub x: usize,
+    pub y: usize,
 }
 
 // Abstract this out into lib
 #[derive(Clone)]
 pub struct Grid<T> {
-    grid: Vec<Vec<T>>,
-    pos: Position,
+    pub grid: Vec<Vec<T>>,
+    pub pos: Position,
 }
 
 impl<T> Grid<T> {
