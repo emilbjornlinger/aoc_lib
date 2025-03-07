@@ -1,6 +1,10 @@
+// Test function
 pub fn info() -> String {
     String::from("This is an Advent of Code library written in rust")
 }
+
+// Expose grid module
+mod grid;
 
 #[cfg(test)]
 mod tests {
