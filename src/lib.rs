@@ -6,6 +6,9 @@ pub fn info() -> String {
 // Expose grid module
 pub mod grid;
 
+// Expose combination module
+pub mod combination;
+
 #[cfg(test)]
 mod tests {
     use super::*;
