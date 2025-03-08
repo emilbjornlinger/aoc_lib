@@ -34,3 +34,15 @@ pub fn memoized_combination_tree<T: Copy>(
 
     tree
 }
+
+pub fn unordered_pairs<T>(values: &Vec<T>) -> Vec<(&T, &T)> {
+    let mut created_pairs = Vec::new();
+
+    for (idx, first_val) in values.iter().enumerate() {
+        for second_val in values[idx + 1..].iter() {
+            created_pairs.push((first_val, second_val));
+        }
+    }
+
+    created_pairs
+}
