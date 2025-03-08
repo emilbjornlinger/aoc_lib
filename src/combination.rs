@@ -4,14 +4,11 @@ pub struct Entry<T: Copy> {
     value_idx: usize,
 }
 
-pub fn memoized_combination_tree<T: Copy, F>(
+pub fn memoized_combination_tree<T: Copy>(
     vals: &Vec<T>,
     num_options: usize,
-    option_closures: Vec<F>,
-) -> Vec<Entry<T>>
-where
-    F: Fn(T, T) -> T,
-{
+    option_closures: Vec<Box<dyn Fn(T, T) -> T>>,
+) -> Vec<Entry<T>> {
     assert_eq!(num_options, option_closures.len());
 
     let mut len: usize = 0;
