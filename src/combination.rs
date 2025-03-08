@@ -1,7 +1,7 @@
 #[derive(Debug)]
 pub struct Entry<T: Copy> {
-    value: T,
-    value_idx: usize,
+    pub value: T,
+    pub value_idx: usize,
 }
 
 pub fn memoized_combination_tree<T: Copy>(
