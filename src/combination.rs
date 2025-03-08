@@ -10,7 +10,7 @@ pub fn memoized_combination_tree<T: Copy, F>(
     option_closures: Vec<F>,
 ) -> Vec<Entry<T>>
 where
-    F: Fn(&T, &T) -> T,
+    F: Fn(T, T) -> T,
 {
     assert_eq!(num_options, option_closures.len());
 
@@ -30,7 +30,7 @@ where
     for i in 1..len {
         let parent = (i - 1) / num_options;
         let value_idx = tree[parent].value_idx + 1;
-        let value: T = option_closures[i % num_options](&tree[parent].value, &vals[value_idx]);
+        let value: T = option_closures[i % num_options](tree[parent].value, vals[value_idx]);
 
         tree.push(Entry { value, value_idx });
     }
