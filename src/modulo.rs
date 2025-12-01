@@ -5,7 +5,7 @@ pub fn modulo_wrap(num: i32, base: u32) -> i32 {
             res += base as i32;
         }
     } else if num > (base - 1) as i32 {
-        while num > (base - 1) as i32 {
+        while res > (base - 1) as i32 {
             res -= base as i32;
         }
     }
