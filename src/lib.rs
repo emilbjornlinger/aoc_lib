@@ -9,6 +9,9 @@ pub mod grid;
 // Expose combination module
 pub mod combination;
 
+// Expose input module
+pub mod input;
+
 #[cfg(test)]
 mod tests {
     use super::*;
