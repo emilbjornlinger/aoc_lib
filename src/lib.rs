@@ -12,6 +12,9 @@ pub mod combination;
 // Expose input module
 pub mod input;
 
+// Expose modulo_wrap module
+pub mod modulo_wrap;
+
 #[cfg(test)]
 mod tests {
     use super::*;
