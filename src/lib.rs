@@ -13,7 +13,7 @@ pub mod combination;
 pub mod input;
 
 // Expose modulo_wrap module
-pub mod modulo_wrap;
+pub mod modulo;
 
 #[cfg(test)]
 mod tests {
